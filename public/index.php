@@ -1,4 +1,6 @@
 <?php
+// Inicio de sesión para manejo de autenticación
+session_start();
 // Fallback if config isn't loaded yet
 if (!defined('APP_ENV')) {
   define('APP_ENV', 'development');
@@ -21,6 +23,9 @@ require_once __DIR__ . '/../core/Router.php';
 $router = new Router();
 // Rutas básicas
 $router->addRoute('/', 'HomeController', 'index');
+$router->addRoute('/login', 'AuthController', 'login');
+$router->addRoute('/logout', 'AuthController', 'logout');
+$router->addRoute('/dashboard', 'DashboardController', 'index');
 
 // Resolve path (ignoring /edupro/public prefix when running under subfolder)
 $uri = $_SERVER['REQUEST_URI'];

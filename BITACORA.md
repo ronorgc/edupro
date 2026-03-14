@@ -42,3 +42,12 @@ Desarrollo de una plataforma SaaS de Gestión Escolar multi-institución, con ar
 **Decisiones técnicas:** Ninguna nueva.
 **Para la próxima sesión:** Implementar Router, Controller base, Model base; crear HomeController y vista inicial.
 ---
+### Sesión 3 — 2026-03-15
+**Trabajado:** Seguimiento de repositorio remoto, confirmación de ramas y plan de siguientes actualizaciones.
+**Estado actualizado:**
+- ✅ Completado: repositorio remoto enlazado; develop y main siguen sincronizados con origin.
+- 🔄 En progreso: definir y aplicar protecciones de rama y definir default branch en GitHub.
+- ⏳ Pendiente: crear PR inicial de develop a main si procede y comenzar migraciones/db scaffold.
+**Decisiones técnicas:** Continuar con flujo develop/main; preparar migraciones iniciales y módulos de autenticación.
+**Para la próxima sesión:** Crear migraciones iniciales y un módulo de autenticación básico (login/logout).
+---
