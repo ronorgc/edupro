@@ -1,0 +1,20 @@
+# Environment
+.env
+.env.local
+
+# Logs
+logs/
+*.log
+
+# PHPStorm / IDE specific
+.idea/
+.vscode/
+
+# Composer/vendor (not used in this pure PHP skeleton but safe to ignore)
+vendor/
+
+# Public assets cache
+public/assets/cache/
+
+# OS files
+.DS_Store
