@@ -13,7 +13,11 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
-          <?php if (isset($_SESSION['user'])): ?><li class="nav-item"><a class="nav-link" href="/logout">Cerrar sesión</a></li><?php endif; ?>
+          <?php if (isset($_SESSION['user'])): 
+                    if ((isset($_SESSION['user']['role_id']) && (int)$_SESSION['user']['role_id'] === 1)) {
+                        echo '<li class="nav-item"><a class="nav-link" href="/superadmin">Super Admin</a></li>';
+                    }
+                  ?><li class="nav-item"><a class="nav-link" href="/logout">Cerrar sesión</a></li><?php endif; ?>
         </ul>
       </div>
     </div>

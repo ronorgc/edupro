@@ -26,6 +26,7 @@ $router->addRoute('/', 'HomeController', 'index');
 $router->addRoute('/login', 'AuthController', 'login');
 $router->addRoute('/logout', 'AuthController', 'logout');
 $router->addRoute('/dashboard', 'DashboardController', 'index');
+$router->addRoute('/superadmin', 'SuperAdminController', 'index');
 
 // Resolve path (ignoring /edupro/public prefix when running under subfolder)
 $uri = $_SERVER['REQUEST_URI'];

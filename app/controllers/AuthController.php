@@ -13,10 +13,15 @@ class AuthController extends Controller {
                 $_SESSION['user'] = [
                     'id' => (int) $user['id'],
                     'email' => $user['email'] ?? '',
-                    'institucion_id' => (int) ($user['institucion_id'] ?? 0),
+                    'institucion_id' => ($user['institucion_id'] !== null) ? (int) $user['institucion_id'] : null,
+                    'role_id' => (int) ($user['role_id'] ?? 0),
                 ];
-                // Redirigir a dashboard o inicio
-                header('Location: /dashboard');
+                // Redirigir según rol
+                if (isset($user['role_id']) && (int) $user['role_id'] === 1) {
+                    header('Location: /superadmin');
+                } else {
+                    header('Location: /dashboard');
+                }
                 exit;
             } else {
                 $this->render('auth/login', ['error' => 'Credenciales incorrectas']);
